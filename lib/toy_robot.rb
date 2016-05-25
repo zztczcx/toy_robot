@@ -80,7 +80,7 @@ class Robot
   end
 
   def report
-    puts "#{@x}, #{@y}, #{@f}"
+    print "#{@x}, #{@y}, #{@f}"
   end
 end
 
@@ -104,9 +104,9 @@ end
 
 
 
-t = Table.new(4, 4)
-r = Robot.new(t)
+#t = Table.new(4, 4)
+#r = Robot.new(t)
 
 #r.input([[:place, 0, 0, :NORTH], [:move], [:report]])
 #r.input([[:place, 0, 0, :NORTH], [:left], [:report]])
-r.input([[:place, 1, 2, :EAST],[:move], [:move], [:left], [:move], [:report]])
+#r.input([[:place, 1, 2, :EAST],[:move], [:move], [:left], [:move], [:report]])
