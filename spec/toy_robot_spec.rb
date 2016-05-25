@@ -15,6 +15,12 @@ RSpec.describe Robot, "command" do
       expect { r.input([[:place, 0, 0, :NORTH], [:left], [:report]]) }.to  output("0, 0, WEST").to_stdout
     end 
 
+    it "place right move" do
+      t = Table.new(4, 4)
+      r = Robot.new(t)
+      expect { r.input([[:place, 1, 1, :NORTH], [:right], [:move], [:report]]) }.to  output("2, 1, EAST").to_stdout
+    end 
+
     it "place move move left move" do
       t = Table.new(4, 4)
       r = Robot.new(t)

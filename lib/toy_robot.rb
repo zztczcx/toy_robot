@@ -28,6 +28,8 @@ class Robot
       @f=f # face, NORTH, SOUTH, EAST, WEST, 这个可以用symboy类型，或者常量？
       @arc=FACE_ARC[f]
     end
+
+    #ignore
   end
 
   def move
@@ -66,15 +68,14 @@ class Robot
   end
 
   def face
-    n = @arc.abs / 90
-    case  
-    when n == 0
+    n = @arc / 90
+    if n == 0
       @f = :EAST
-    when n == 1
+    elsif n == 1 or n == -3
       @f = :NORTH
-    when n == 2
+    elsif n == 2 or n == -2
       @f = :WEST
-    when n == 3
+    else
       @f = :SOUTH
     end
   end
